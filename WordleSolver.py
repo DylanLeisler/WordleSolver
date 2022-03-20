@@ -1,6 +1,8 @@
 from Alphabet import Alphabet as col
 from tabulate import tabulate
 
+# TODO refactor
+
 TOTAL_GUESSES = 5
 
 col1 = col()
@@ -52,12 +54,6 @@ def render_options(words):
     print(tabulate(words))
 
 
-# render_options(
-#     filter_words(
-#         col_list, extract_words('word_options.txt')
-#     )
-# )
-
 word_list = extract_words('word_options.txt')
 for interval in range(TOTAL_GUESSES):
     for i, col in enumerate(col_list, 1):
@@ -67,11 +63,6 @@ for interval in range(TOTAL_GUESSES):
             col_list, word_list
         )
     )
-    # for col in col_list:
-    #     update_column(col, i)
-    #     i += 1
-    #
-    # i = 1
 
 
 

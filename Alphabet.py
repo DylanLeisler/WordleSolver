@@ -11,11 +11,12 @@ class Alphabet:
 
     def remove_letter(self, c):
         self.local_abc.remove(c.upper())
-        self.must_have.append(c.upper())
+        self.must_have.append(c.upper())  # the word must include yellow letters
 
     def correct_letter(self, c):
         self.local_abc = c.upper()
+        self.must_have.append(c.upper())
 
     def add_glob_ban_letter(self, c):
-        self.glob_abc.append(c.upper())
+        self.glob_abc.append(c.upper())  # any letter in this list is banned
         self.glob_abc.sort()
